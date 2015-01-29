@@ -58,7 +58,7 @@
  	val3 = (parseInt(val3) ? parseInt(val3) : 0);
 
  	// add the three values
- 	var total = val1 + val2;
+ 	var total = val1 + val2 + val3;
 
  	//display the total in the results area
  	document.getElementById("resultArea").innerHTML=total;
