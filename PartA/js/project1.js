@@ -56,6 +56,14 @@
  	val1 = (parseInt(val1) ? parseInt(val1) : 0);
  	val2 = (parseInt(val2) ? parseInt(val2) : 0);
  	val3 = (parseInt(val3) ? parseInt(val3) : 0);
+  
+  //QUnit.test( "hello test", function( assert ) {
+    //assert.ok( 1 == "1", "Passed!" );
+    //});
+  QUnit.test("val1 is int", function( assert ) {
+    assert.ok(parseInt(val1) != 0, "Passed!");
+  });
+  
 
  	// add the three values
  	var total = val1 + val2 + val3;
@@ -63,3 +71,4 @@
  	//display the total in the results area
  	document.getElementById("resultArea").innerHTML=total;
  }
+ 
