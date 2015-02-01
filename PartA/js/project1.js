@@ -12,6 +12,12 @@
  */
 "use strict";
 
+ var qunitBarBtn = document.getElementById("qunit-notice");
+ qunitBarBtn.onclick = function() {
+	 var qunit = document.getElementById("qunit-container");
+	 qunit.className = (qunit.className == 'hide') ? 'show' : 'hide';
+ }
+
  var clickme1Btn = document.getElementById("clickme1");
  clickme1Btn.onclick = function(){
  		// This is the code that will be executed when the button is clicked.
@@ -51,18 +57,18 @@
  	var val1 = document.getElementById("input1").value;
  	var val2 = document.getElementById("input2").value;
  	var val3 = document.getElementById("input3").value;
+	
+	// fooling around with QUnit here
+	// wondering if all 3 values entered are in fact numbers
+    QUnit.test("vals are numbers", function( assert ) {
+		var rExp = /^[0-9]+$/;
+      	assert.ok((rExp.test(val1) && rExp.test(val2) && rExp.test(val3)), "Passed!");
+    });
 
  	//check that they are integers, otherwise make them zero
  	val1 = (parseInt(val1) ? parseInt(val1) : 0);
  	val2 = (parseInt(val2) ? parseInt(val2) : 0);
  	val3 = (parseInt(val3) ? parseInt(val3) : 0);
-  
-  //QUnit.test( "hello test", function( assert ) {
-    //assert.ok( 1 == "1", "Passed!" );
-    //});
-  QUnit.test("val1 is int", function( assert ) {
-    assert.ok(parseInt(val1) != 0, "Passed!");
-  });
   
 
  	// add the three values

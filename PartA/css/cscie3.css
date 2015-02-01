@@ -61,3 +61,22 @@ h4 {
 	position:relative;
 	top:1px;
 }
+#qunit-notice {
+	background-color: #22bb66;
+	color: white;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 5px;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+}
+.hide {
+	height: 0;
+	visibility: hidden;
+}
+.show {
+	height: auto;
+	visibility: visible;
+}
